@@ -20,18 +20,21 @@ function Skills() {
     },
     ];
 
-    return(
-            <main>
-                {mySkills.map((skills) => {
-                    return (
-                        <h2>|{skills.name}| =
-                            |{skills.price}$|
-                        </h2>
-                        
-                    );
-                })}
-            </main>
-            );
-    }
+    return (
+        <main>
+          {mySkills.map((skill) => { 
+           return (
+             <>
+             {skill.isProd && (
+          <div>
+          <p>{skill.name} | {skill.price}</p>
+          </div>
+          )}
+          </>
+              );
+           })}
+         </main>
+       );
+     }
 
 export default Skills;
